@@ -76,7 +76,7 @@ class Bot():
             </a>')
         checkout.click()
         time.sleep(1)
-
+        
         #check total
         total = driver.find_element_by_xpath('class="col-4 totals-text text-right">
             <p class="p-cart-total-grand text-right grand-total">')
