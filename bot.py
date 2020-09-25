@@ -64,22 +64,22 @@ class Bot():
         addToCart.click()
         time.sleep(1)
         cart = driver.find_element_by_xpath('<a class="p-header-actions-link p-header-actions-icon p-header-actions-icon--cart js-cmp-mini-cart-open" href="#cart" title="View Cart">
-<svg class="icon">
-<use xlink:href="#cart"></use>
-</svg>
-<span class="p-header-actions-count js-cmp-mini-cart-quantity-total p-header-actions-count--active">1</span>
-</a>')
+            <svg class="icon">
+            <use xlink:href="#cart"></use>
+            </svg>
+            <span class="p-header-actions-count js-cmp-mini-cart-quantity-total p-header-actions-count--active">1</span>
+            </a>')
         cart.click()
         time.sleep(1)
         checkout = driver.find_element_by_xpath('<a href="https://us.puma.com/en/us/checkout/start" class="btn btn-primary btn-block checkout-btn" role="button" aria-pressed="true">
-Checkout
-</a>')
+            Checkout
+            </a>')
         checkout.click()
         time.sleep(1)
 
         #check total
         total = driver.find_element_by_xpath('class="col-4 totals-text text-right">
-<p class="p-cart-total-grand text-right grand-total">')
+            <p class="p-cart-total-grand text-right grand-total">')
         if total>=200:
             print("error - price out of range")
             driver.quit()
